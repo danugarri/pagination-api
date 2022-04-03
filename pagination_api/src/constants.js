@@ -95,56 +95,56 @@ export const products = [
     "description": "Producto premium.",
     "active": true,
     "price": 0.79,
-    "SKU": "HB0000000014"
+    "SKU": "HB000000014"
   },
   {
     "name": "Cebolla Premium",
     "description": "Producto Premium.",
     "active": true,
     "price": 1.79,
-    "SKU": "HB0000000015"
+    "SKU": "HB000000015"
   },
   {
     "name": "Zanahoria Premium",
     "description": "Producto Premium",
     "active": true,
     "price": 2.79,
-    "SKU": "HB0000000016"
+    "SKU": "HB000000016"
   },
   {
     "name": "Patata Premium",
     "description": "Producto Premium",
     "active": true,
     "price": 0.39,
-    "SKU": "HB0000000017"
+    "SKU": "HB000000017"
   },
   {
     "name": "Tomate Premium",
     "description": "Producto Premium",
     "active": true,
     "price": 0.89,
-    "SKU": "HB0000000018"
+    "SKU": "HB000000018"
   },
   {
     "name": "Tomate Premium",
     "description": "Producto Premium",
     "active": true,
     "price": 0.89,
-    "SKU": "HB0000000019"
+    "SKU": "HB000000019"
   },
   {
     "name": "Tomate Premium",
     "description": "Producto Premium",
     "active": true,
     "price": 0.89,
-    "SKU": "HB0000000020"
+    "SKU": "HB000000020"
   },
   {
     "name": "Pepino Premium",
     "description": "Producto Premium",
     "active": true,
     "price": 2.89,
-    "SKU": "HB0000000021"
+    "SKU": "HB000000021"
   },
   {
     "name": "Pimiento Premium",
