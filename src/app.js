@@ -56,7 +56,7 @@ app.get('/hola/:page', function(req,res) {
 });
 ////// Wanted request
 app.get('/list/:page', function  (req, res) {
-
+  // request example http://localhost:9000/list/1
   const pageFiltered = req.params.page;
   // request
   const filteredProducts= products.filter(product => {
