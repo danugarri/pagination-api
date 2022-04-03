@@ -1,0 +1,35 @@
+{
+  "name": "pagination-api",
+  "version": "0.0.1",
+  "description": "This api wil return a paginated items",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon ./src/app.js",
+    "test": "PORT=3009 NODE_ENV=test NODE_NO_WARNINGS=1 mocha --require mocha.conf.js --exit \"src/**/*.spec.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danugarri/pagination-api"
+  },
+  "keywords": [],
+  "author": "Danugarri",
+  "license": "ISC",
+  "homepage": "https://github.com/danugarri/pagination-apii#readme",
+  "dependencies": {
+    "better-validator": "^2.1.9",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "lodash": "^4.17.21",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.13.6",
+    "morgan": "^1.10.0",
+    "verror": "^1.10.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/register": "^7.15.3",
+    "nodemon": "^2.0.12"
+  }
+}
