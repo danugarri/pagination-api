@@ -17,30 +17,22 @@ app.use(function(req, res, next) {
 app.get('/products', function(req, res){
   res.json(products);
 });
-// get page queryParam
-const url= app.path();
 
-const  mYUrl= new URL(`https://${app.request.params}`);
-const page= mYUrl.searchParams.get('page');
+const  mYUrl= new URL(`http://localhost:9000/product?page=3`);
+// const  mYUrl= new URL(`http://localhost:9000/product?page=3`);
+const page= Number(mYUrl.searchParams.get('page'));
 // request
-app.get(`/products?page=${page}`, function(req, res){
- 
-  switch(page) {
-    case '0':
-      const filteredProducts= products.filter(product => product.SKU.substring(10) <=10)
-      
-      return res.json(filteredProducts);
-    case '1':
-    
-      return res.json(products.filter(product => product.SKU.substring(10) <=20 &&  product.SKU.substring(10) >10));
-    case '2':
-    
-      return res.json(products.filter(product => product.SKU.substring(10) <=30 &&  product.SKU.substring(10) >20));
-    default :
+const filteredProducts= products.filter(product =>{
+  const stringToFilter= product.SKU.substring(9);
+  const result = Number(stringToFilter) <= (page+1)*10 &&  Number(stringToFilter) > page*10;
 
-      return  res.json(products);
-    }
+  return result;
+}
+   )
+app.get(`/product`, function(req, res){
  
+  res.json(filteredProducts);
+    
 });
 // app.put('/update', function(req, res){
 //   console.log( 'the product would have been updated');
