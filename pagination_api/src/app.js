@@ -34,20 +34,6 @@ app.get(`/product`, function(req, res){
   res.json(filteredProducts);
     
 });
-export const getFilteredList=  (req, res) => {
-
-  const pageFiltered = req.params.page;
-  // request
-  const filteredProducts= products.filter(product => {
-    const stringToFilter= product.SKU.substring(9);
-    const result = Number(stringToFilter) <= (pageFiltered+1)*10 &&  Number(stringToFilter) > pageFiltered*10;
-
-    return result;
-  }
-  );
-  res.json(filteredProducts)
-
-};
 app.get('/test', function(req,res) {
   res.send('Hola')
 })
@@ -68,12 +54,20 @@ app.get('/hola/:page', function(req,res) {
   const page= req.params.page
   res.send(page)
 });
+////// Wanted request
+app.get('/list/:page', function  (req, res) {
 
+  const pageFiltered = req.params.page;
+  // request
+  const filteredProducts= products.filter(product => {
+    const stringToFilter= product.SKU.substring(9);
+    const result = Number(stringToFilter) <= (pageFiltered+1)*10 &&  Number(stringToFilter) > pageFiltered*10;
 
-
-// app.put('/update', function(req, res){
-//   console.log( 'the product would have been updated');
-// });
+    return result;
+  }
+  );
+  res.json(filteredProducts);
+});
 
 async function startServer () {
   // Initialize loaders
