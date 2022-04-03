@@ -62,8 +62,11 @@ app.get('/list/:page', function  (req, res) {
   const filteredProducts= products.filter(product => {
     const stringToFilter= product.SKU.substring(9);
     const result = Number(stringToFilter) <= (pageFiltered+1)*10 &&  Number(stringToFilter) > pageFiltered*10;
-
-    return result;
+   
+    if(pageFiltered==='0') return Number(stringToFilter) <= 10 &&  Number(stringToFilter) > 0;
+    if(pageFiltered==='1') return  Number(stringToFilter) <= 20 &&  Number(stringToFilter) > 10;
+    if(pageFiltered==='2') return Number(stringToFilter) <= 30 &&  Number(stringToFilter) > 20;
+    // return result;
   }
   );
   res.json(filteredProducts);
