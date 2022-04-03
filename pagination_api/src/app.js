@@ -53,8 +53,22 @@ app.get('/test', function(req,res) {
 })
 app.get('/test:page', function(req,res) {
   const page= req.params.page
-  res.send('Hola página')
+  res.send('Hola página 1')
 });
+app.get('/test/:page', function(req,res) {
+  const page= req.params.page
+  res.send('Hola página 2')
+});
+// esto no lo reconoce
+app.get('/test?page=0', function(req,res) {
+  const page= req.params.page
+  res.send('Hola página 3')
+});
+app.get('/hola/:page', function(req,res) {
+  const page= req.params.page
+  res.send(page)
+});
+
 
 
 // app.put('/update', function(req, res){
