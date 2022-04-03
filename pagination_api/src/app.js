@@ -14,12 +14,12 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
-app.get('/products', function(req, res){
-  res.json(products);
-});
+// app.get('/products', function(req, res){
+//   res.json(products);
+// });
 
 const  mYUrl= new URL(`http://localhost:9000/product?page=3`);
-// const  mYUrl= new URL(`http://localhost:9000/product?page=3`);
+
 const page= Number(mYUrl.searchParams.get('page'));
 // request
 const filteredProducts= products.filter(product =>{
@@ -34,6 +34,29 @@ app.get(`/product`, function(req, res){
   res.json(filteredProducts);
     
 });
+export const getFilteredList=  (req, res) => {
+
+  const pageFiltered = req.params.page;
+  // request
+  const filteredProducts= products.filter(product => {
+    const stringToFilter= product.SKU.substring(9);
+    const result = Number(stringToFilter) <= (pageFiltered+1)*10 &&  Number(stringToFilter) > pageFiltered*10;
+
+    return result;
+  }
+  );
+  res.json(filteredProducts)
+
+};
+app.get('/test', function(req,res) {
+  res.send('Hola')
+})
+app.get('/test:page', function(req,res) {
+  const page= req.params.page
+  res.send('Hola página')
+});
+
+
 // app.put('/update', function(req, res){
 //   console.log( 'the product would have been updated');
 // });
