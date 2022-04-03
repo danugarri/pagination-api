@@ -90,4 +90,95 @@ export const products = [
     "price": 0.89,
     "SKU": "HB000000013"
   },
+    {
+    "name": "Lechuga Premium",
+    "description": "Producto premium.",
+    "active": true,
+    "price": 0.79,
+    "SKU": "HB0000000014"
+  },
+  {
+    "name": "Cebolla Premium",
+    "description": "Producto Premium.",
+    "active": true,
+    "price": 1.79,
+    "SKU": "HB0000000015"
+  },
+  {
+    "name": "Zanahoria Premium",
+    "description": "Producto Premium",
+    "active": true,
+    "price": 2.79,
+    "SKU": "HB0000000016"
+  },
+  {
+    "name": "Patata Premium",
+    "description": "Producto Premium",
+    "active": true,
+    "price": 0.39,
+    "SKU": "HB0000000017"
+  },
+  {
+    "name": "Tomate Premium",
+    "description": "Producto Premium",
+    "active": true,
+    "price": 0.89,
+    "SKU": "HB0000000018"
+  },
+  {
+    "name": "Tomate Premium",
+    "description": "Producto Premium",
+    "active": true,
+    "price": 0.89,
+    "SKU": "HB0000000019"
+  },
+  {
+    "name": "Tomate Premium",
+    "description": "Producto Premium",
+    "active": true,
+    "price": 0.89,
+    "SKU": "HB0000000020"
+  },
+  {
+    "name": "Pepino Premium",
+    "description": "Producto Premium",
+    "active": true,
+    "price": 2.89,
+    "SKU": "HB0000000021"
+  },
+  {
+    "name": "Pimiento Premium",
+    "description": "Producto Premium",
+    "active": true,
+    "price": 0.89,
+    "SKU": "HB000000022"
+  },
+  {
+    "name": "Pimiento Premium",
+    "description": "Producto Premium",
+    "active": true,
+    "price": 0.89,
+    "SKU": "HB000000023"
+  },
+  {
+    "name": "Pimiento Premium",
+    "description": "Producto Premium",
+    "active": true,
+    "price": 0.89,
+    "SKU": "HB000000024"
+  },
+  {
+    "name": "Tomate Premium",
+    "description": "Producto Premium",
+    "active": true,
+    "price": 1.59,
+    "SKU": "HB000000025"
+  },
+  {
+    "name": "Tomate Premium",
+    "description": "Producto Premium",
+    "active": true,
+    "price": 0.89,
+    "SKU": "HB000000026"
+  },
 ]
